@@ -49,7 +49,10 @@ function first_person_clicked(score1) {
     //  checkBeore();
     // }
 
-    if (ifcount == Total_rounds + 1) {
+    if (
+      ifcount == Total_rounds + 1 ||
+      person1_single_point >= Math.ceil(Total_rounds / 2)
+    ) {
       document.querySelector(".first-person-status").innerText =
         person1_single_point++;
       //  alert("game Finsished");
@@ -89,7 +92,7 @@ function second_person_clicked(score2) {
     //  checkBeore();
 
     //   }
-    if (ifcount == Total_rounds + 1 ) {
+    if (ifcount == Total_rounds + 1 || person2_single_point>=Math.ceil(Total_rounds/2)) {
       console.log(ifcount, Total_rounds);
       document.querySelector(".second-person-status").innerText =
         person2_single_point++;
