@@ -89,7 +89,7 @@ function second_person_clicked(score2) {
     //  checkBeore();
 
     //   }
-    if (ifcount == Total_rounds + 1 || ifcount == 3) {
+    if (ifcount == Total_rounds + 1 ) {
       console.log(ifcount, Total_rounds);
       document.querySelector(".second-person-status").innerText =
         person2_single_point++;
