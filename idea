@@ -1,0 +1,17 @@
+make 2 buttons
+
+assign 100 points to both
+
+click on 1st button get power value between 0-5 and reduce it from 100 and 
+assign it to innerText of 2nd person having 100 points
+
+click on 2nd button get power value between 0-5 and reduce it from 100 and 
+assign it to innerText of 1st person having 100 points
+
+check vale of variabe each time once reaches zero add 1 point.
+(need to use function pass the reduced value to function to check equal to zero or not)
+once zero increase  point of opponent.save it invariable.
+
+game 2-
+game 3-
+game 4-- so on..
