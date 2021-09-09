@@ -5,20 +5,38 @@ let person1_single_point = 1;
 let person2_single_point = 1;
 let ifcount = 1;
 let Total_rounds = 5;
+first_btn = true;
+second_btn =false;
 
 allBtns = document.querySelectorAll(".btn");
 document.querySelector(".total-rounds").innerText = Total_rounds;
-
+const btt = document.getElementById('btt');
 allBtns.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
     let id = e.currentTarget.dataset.id;
     if (id === "first_btn") {
       //    console.log("first Button is clicked");
+      if(first_btn){
+             first_btn = false;
+             second_btn = true;
       first_person_clicked(first_person_init);
+
+      }else{
+          alert("It's Button2's turn");
+      }
+   
     }
     if (id === "second-btn") {
       //    console.log("second button is clicked");
-      second_person_clicked(second_person_init);
+
+      if (second_btn) {
+        first_btn = true;
+        second_btn = false;
+        second_person_clicked(second_person_init);
+      } else {
+        alert("It's Button1's turn");
+      }
+
     }
     if (id === "start") {
       start(starting_points);
@@ -33,7 +51,7 @@ function start(starting_points) {
   document.querySelector(".first-point").innerText = starting_points;
   document.querySelector(".second-point").innerText = starting_points;
   document.querySelector(".final-result").innerText = "";
-  document.getElementById("start").disabled = true;
+  document.querySelector(".start").disabled = true;
 }
 
 function first_person_clicked(score1) {
@@ -153,4 +171,36 @@ function checkWhoWon() {
     alert("Game Finished");
   }
   start_again(starting_points);
+}
+
+function newGame(){
+    
+     document.querySelector(".first-point").innerText = "";
+       document.querySelector(".second-point").innerText = "";
+        document.querySelector(".first-person-status").innerText ='';
+        document.querySelector(".second-person-status").innerText ='';
+          document.querySelector(".start").disabled = false;
+           starting_points = 100;
+          first_person_init = 100;
+           second_person_init = 100;
+           person1_single_point = 1;
+           person2_single_point = 1;
+           ifcount = 1;
+           Total_rounds = 5;
+          first_btn = true;
+          second_btn = false;
+          document.querySelector(".round").innerText = `${ifcount}st Round`;
+
+
+
+ 
+}
+function openMenu(){
+    btt.style.bottom = "0";
+    console.log("open");
+
+}
+function menuClose(){
+btt.style.bottom = "100vh";
+
 }
