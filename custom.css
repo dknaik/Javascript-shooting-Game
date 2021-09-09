@@ -145,3 +145,23 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
               padding: 20px;
               line-height: 30px;
           }
+        @media (max-width:600px){
+            section{
+                width:300px;
+            }
+            .content-sec p{
+                font-size: 20px;
+            }
+            .rules{
+                display: block;
+                left:100px;
+                
+            }
+            .dropDown p{
+                line-height: 18px;
+            }
+              .final-result{
+      font-size:20px;
+    }
+          
+        }
